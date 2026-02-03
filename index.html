@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for my princess</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Page 1: Initial Landing -->
+    <div class="page active" id="page1">
+        <div class="content">
+            <h1 class="fade-in">hey there, beautiful </h1>
+            <p class="fade-in-delay">i mightve done something ...</p>
+            <button class="btn-primary" onclick="nextPage()">click me !!</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Name Reveal -->
+    <div class="page" id="page2">
+        <div class="content">
+            <h1 class="typing-text" id="typingText"></h1>
+            <div class="nickname-badges">
+                <span class="badge">diy</span>
+                <span class="badge">monkey</span>
+                <span class="badge">georgie</span>
+                <span class="badge">princess</span>
+                <span class="badge">baby </span>
+            </div>
+            <button class="btn-primary" onclick="nextPage()">continue !!</button>
+        </div>
+    </div>
+
+    <!-- Page 3: Reasons Why -->
+    <div class="page" id="page3">
+        <div class="content">
+            <h1>reasons why i love you </h1>
+            <div class="reasons-container" id="reasonsContainer">
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how hot you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how funny you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how hot you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how hot you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how smart you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how hardworking you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how hot you are</p>
+                </div>
+                <div class="reason-card">
+                    <div class="emoji"></div>
+                    <p>how smart and hot you are</p>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="nextPage()">keep going !!</button>
+        </div>
+    </div>
+
+    <!-- Page 4: Interactive Memory Lane -->
+    <div class="page" id="page4">
+        <div class="content">
+            <h1>some moments we had</h1>
+            <div class="memory-grid">
+                <div class="memory-card" onclick="showMemory(0)">
+                    <div class="memory-icon"></div>
+                    <p>staring problem</p>
+                </div>
+                <div class="memory-card" onclick="showMemory(1)">
+                    <div class="memory-icon"></div>
+                    <p>birthday !!</p>
+                </div>
+                <div class="memory-card" onclick="showMemory(2)">
+                    <div class="memory-icon"></div>
+                    <p>how nice you are</p>
+                </div>
+                <div class="memory-card" onclick="showMemory(3)">
+                    <div class="memory-icon"></div>
+                    <p>favorite day</p>
+                </div>
+            </div>
+            <div class="memory-display" id="memoryDisplay"></div>
+            <button class="btn-primary" onclick="nextPage()">next !!</button>
+        </div>
+    </div>
+
+    <!-- Page 5: Love Letter -->
+    <div class="page" id="page5">
+        <div class="content">
+            <div class="letter-container">
+                <div class="letter">
+                    <h2>my love of my life,</h2>
+                    <p>My beautiful girlfriend, hope youre well !! i suck at letters so i hope this is ok !!</p>
+                    <p>I just wanna say, i love you so so so so so much, genuinely i have never loved anyone as much as i love you.</p>
+                    <p>I know we cant be together the way we both want to, but i have loved and will always remember every single moment i have spent with you</p>
+                    <p>you are everything to me, the reason i work so hard is to make you proud of me, you are the most beautiful girl i have ever seen and im so lucky to be able to call you my girlfriend</p>
+                    <p>i want to say that i am so so so incredibly proud of you and how far youve come, you are such a hardworking, caring, smart, and amazing person and i hope you know this. you are perfect, dont ever think youre not.</p>
+                    <p>i have 1 question i wanna ask (scroll down)</p>
+                    <p>will you be my forever valentine??</p>
+                    <p class="signature">love, squish</p>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="nextPage()">💌</button>
+        </div>
+    </div>
+
+    <!-- Page 6: The Question -->
+    <div class="page" id="page6" style="overflow: visible !important;">
+        <div class="content" style="overflow: visible !important;">
+            <h1 class="question-text">will you be my valentine?? </h1>
+            <div class="button-container" style="overflow: visible !important;">
+                <button class="btn-yes" id="yesBtn" onclick="handleYes()">YES !!</button>
+                <button class="btn-no" id="noBtn" onmouseover="moveButton()" onclick="handleNo()" style="z-index: 99999 !important;">No !!</button>
+            </div>
+            <p class="hint" id="hint"></p>
+        </div>
+    </div>
+
+    <!-- Page 7: Celebration -->
+    <div class="page" id="page7">
+        <div class="content celebration">
+            <h1 class="celebration-text">YIPPEE</h1>
+            <div class="love-explosion">
+                <div class="big-heart">❤️</div>
+            </div>
+            <h2>i hope you said yes, i put alot of work into this 😒</h2>
+            <p>thank you for saying yes and not leaving me single on valentines day</p>
+            <p>happy valentines day, princess !!</p>
+            <p>my princess, my monkey, my georgie, my girl</p>
+            <div class="final-message">
+                <p>i love you more than i love myself</p>
+            </div>
+            <button class="btn-primary" onclick="restart()">see it again ( i know you want to )</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
